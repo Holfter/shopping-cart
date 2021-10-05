@@ -26,11 +26,11 @@ function Basket(props) {
           <div className="btn-and-qty">
             <div>
               <div className="qtyBtn">
-                <button onClick={() => onAdd(item)}>+</button>
+                <button onClick={() => onRemove(item)}>-</button>
               </div>
               <div className="qty">{item.qty}x</div>
               <div className="qtyBtn">
-                <button onClick={() => onRemove(item)}>-</button>
+                <button onClick={() => onAdd(item)}>+</button>
               </div>
             </div>
           </div>
