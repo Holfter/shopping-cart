@@ -10,6 +10,8 @@ function Main(props) {
     setAll(products);
     setSort(sort);
   };
+
+  //Function that handles the 'sort by'
   const sortArray = (type) => {
     const types = {
       alphabetical: 'alphabetical',
@@ -48,6 +50,7 @@ function Main(props) {
       <div className="main-top">
         <div className="shopTitle">Shop</div>
         <div className="sortBy">
+          <div>Sort by:</div>
           <div
             className={
               sort === 'lowToHighPrice' || sort === 'highToLowPrice'

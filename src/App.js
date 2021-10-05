@@ -5,10 +5,14 @@ import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 import data from './products/products.json';
 function App() {
+  //Products list
   let products = data;
+
   const [cartItems, setCartItems] = useState([]);
   const [checkoutDone, setCheckoutDone] = useState(false);
   const [sidebar, setSidebar] = useState(true);
+
+  //Add product on basket or add one more for the product
   const onAdd = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);
     if (exist) {
@@ -23,6 +27,7 @@ function App() {
     setCheckoutDone(false);
   };
 
+  //Remove product from the basket
   const onRemove = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);
     if (exist.qty === 1) {
@@ -36,10 +41,12 @@ function App() {
     }
   };
 
+  //Check if the sidebar was clicked to open
   const handleSidebar = () => {
     setSidebar(!sidebar);
   };
 
+  //Check if the checkout button was clicked, if so clean the cart items
   const handleCheckout = () => {
     setCartItems([]);
     setCheckoutDone(true);

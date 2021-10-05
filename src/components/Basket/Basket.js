@@ -4,6 +4,8 @@ function Basket(props) {
   const { cartItems, onAdd, onRemove, showAndHide, onCheckout, checkoutDone } =
     props;
   const [checkout, setCheckout] = useState(false);
+
+  //Price calculation
   const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0);
   const shippingPrice = itemsPrice > 250 ? 0 : 10;
   const totalPrice = itemsPrice + shippingPrice;
@@ -48,6 +50,8 @@ function Basket(props) {
           <div>Total: R${totalPrice.toFixed(2)}</div>
         </div>
       )}
+
+      {/* Show checkout button if the cart is not empty */}
       {cartItems.length !== 0 && (
         <div
           onClick={() => {
@@ -59,6 +63,8 @@ function Basket(props) {
           <span>Checkout</span>
         </div>
       )}
+
+      {/* If the checkout button was clicked it shows the container below */}
       {checkoutDone === true && (
         <div className="finalCheckout">
           <img src="/shopping-cart/images/checked.png" alt="" />
