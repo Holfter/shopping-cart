@@ -1,0 +1,100 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10%;
+  transition: 0.5s;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  transition: 0.5s;
+  padding: 0;
+}
+
+.sortBy {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.btn {
+  border: 1px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+  width: max-content;
+  color: rgb(255, 255, 255);
+  padding: 3px 10px;
+  color: white;
+}
+
+.active {
+  background: white;
+  color: black;
+}
+
+.main-top {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+.shopTitle {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.select {
+  position: relative;
+  cursor: pointer;
+}
+
+.activeBtn {
+  display: none;
+  position: absolute;
+  left: 0;
+  border-radius: 10px;
+}
+
+.select:hover .activeBtn {
+  background: #0f1925;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: max-content;
+  height: max-content;
+}
+
+.activeBtn span {
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.activeBtn span:hover {
+  color: black;
+  background: white;
+}
+
+@media (max-width: 680px) {
+  .row {
+    justify-content: center;
+  }
+
+  .main-top {
+    flex-direction: column;
+  }
+
+  .sortBy {
+    gap: 5px;
+  }
+
+  .btn {
+    font-size: 13px;
+  }
+
+  .shopTitle {
+    margin-bottom: 15px;
+  }
+}

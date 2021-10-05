@@ -1,0 +1,158 @@
+.sidenav {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #0f1925;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 50px;
+  color: white;
+}
+
+.hide {
+  width: 0;
+}
+
+.basketItem > div {
+  display: flex;
+  align-items: center;
+}
+.basketItem {
+  font-family: 'Roboto Mono', monospace;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  padding: 0 10px;
+}
+
+.basketItem img {
+  width: 50px;
+}
+
+.qtyBtn button {
+  background: none;
+  padding: 5px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 20px;
+}
+
+.qty {
+  border: 1px solid black;
+  background: white;
+  color: black;
+  height: max-content;
+  padding: 3px 10px;
+}
+
+.basketItemName {
+  margin-left: 20px;
+}
+
+.image-and-title {
+  width: 60%;
+}
+
+.btn-and-qty {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+}
+
+.btn-and-qty div {
+  display: flex;
+  align-items: center;
+}
+
+.btn-and-qty div div {
+  margin: 0 7px;
+}
+
+.item-price {
+  width: 20%;
+}
+
+.purchase-details {
+  padding: 0 10px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.checkout {
+  padding: 0 10px;
+  margin: 10px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.checkout span {
+  box-shadow: inset 0px 0px 15px 3px #2e5daf;
+  background: linear-gradient(to bottom, #2f64c0 5%, #263b64 100%);
+  background-color: #2e466e;
+  border-radius: 17px;
+  border: 1px solid #1f2f47;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 15px;
+  padding: 15px 30px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #263666;
+}
+.checkout span:hover {
+  background: linear-gradient(to bottom, #415989 5%, #2e466e 100%);
+  background-color: #415989;
+}
+.checkout span:active {
+  position: relative;
+  top: 1px;
+}
+
+.finalCheckout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.finalCheckout div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.finalCheckout img {
+  width: 20vw;
+  justify-self: center;
+}
+
+@media (max-width: 680px) {
+  .sidenav {
+    width: 100%;
+  }
+  .hide {
+    width: 0;
+  }
+
+  .checkout span {
+    width: 80%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 370px) {
+  .basketItem {
+    font-size: 15px;
+  }
+
+  .btn-and-qty div div {
+    margin: 0;
+  }
+}
