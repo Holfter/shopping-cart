@@ -1,4 +1,4 @@
-[⚠️This project is old and does not reflect my level of knowledge today.⚠️]
+# [⚠️This project is old and does not reflect my level of knowledge today.⚠️]
 
 Simple e-commerce created with ReactJS and pure CSS
 <br/>
